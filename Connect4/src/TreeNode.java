@@ -2,8 +2,14 @@
 public class TreeNode {
 	
 	State state;
-	TreeNode left;
-	TreeNode right;
+	TreeNode first;
+	TreeNode second;
+	TreeNode third;
+	TreeNode fourth;
+	TreeNode fifth;
+	TreeNode sixth;
+	TreeNode seventh;
+	
 	
 	
 	
@@ -13,18 +19,50 @@ public class TreeNode {
 	public void setState(State state) {
 		
 	}
-	public TreeNode getLeft() {
+	public TreeNode getFirst() {
 		
 	}
-	public void setLeft(TreeNode left) {
+	public void setFirst(TreeNode first) {
 		
 	}
-	public TreeNode getRight() {
+	public TreeNode getSecond() {
 		
 	}
-	public void setRight(TreeNode right) {
+	public void setSecond(TreeNode second) {
+	
+	}
+	public TreeNode getThird() {
 		
 	}
+	public void setThird(TreeNode third) {
+		
+	}
+	public TreeNode getFourth() {
+		
+	}
+	public void setFourth(TreeNode fourth) {
+		
+	}
+	public TreeNode getFifth() {
+		
+	}
+	public void setFifth(TreeNode fifth) {
+		
+	}
+	public TreeNode getSixth() {
+		
+	}
+	public void setSixth(TreeNode sixth) {
+		
+	}
+	public TreeNode getSeventh() {
+		
+	}
+	public void setSeventh(TreeNode seventh) {
+		
+	}
+	
+	
 	
 	
 	
