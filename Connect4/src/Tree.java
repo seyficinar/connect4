@@ -4,7 +4,7 @@ public class Tree {
 	TreeNode root;
 	
 	
-	
+	//Constructor, getter and setter
 	public Tree() {
 		
 	}
@@ -20,6 +20,8 @@ public class Tree {
 	public void setRoot(TreeNode root) {
 		
 	}
+	
+	
 
 
 
