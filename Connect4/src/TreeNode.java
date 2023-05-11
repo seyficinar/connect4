@@ -14,7 +14,8 @@ public class TreeNode {
 	public TreeNode(State state) {
 		this.state = state;
 	}
-
+	
+	//Calculate the goodness of TreeNode according to its nodes
 	public int calculatePoint() {
 		int point = 0;
 		if (first != null) {

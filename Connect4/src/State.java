@@ -2,24 +2,27 @@ class State {
 	char[][] data;
 
 	int point;
+	boolean aboutToLose;
+	boolean aboutToWin;
 
-	// Constructor, getter and setter
-	public State() {
-	}
-
+	// Calculates how much the state of move is good. I know it is not the best
+	// implementation of calculating the move's goodness. But for a start, I think
+	// it is good
 	public int calculatePoint() {
 		int maxPoints = Integer.MAX_VALUE;
 
 		// Check for 4 consecutive 'B' vertically, horizontally, or diagonally
 		if (checkConsecutive('B', 4)) {
+			aboutToWin = true;
 			point = maxPoints;
-			return point/7;
+			return point;
 		}
 
 		// Check for 4 consecutive 'P' vertically, horizontally, or diagonally
-		if (checkConsecutive('P', 4)) {
+		if (checkConsecutive('P', 4) && !aboutToWin) {
+			aboutToLose = true;
 			point = -maxPoints;
-			return point/7;
+			return point;
 		}
 
 		int numConsecutive2B = countConsecutive('B', 2);
@@ -30,6 +33,10 @@ class State {
 		// Calculate the final point value
 		point = 2 * numConsecutive2B + 3 * numConsecutive3B - 2 * numConsecutive2P - 3 * numConsecutive3P;
 		return point;
+	}
+
+	// Constructor, getter and setter
+	public State() {
 	}
 
 	public State(char[][] data) {
@@ -54,12 +61,13 @@ class State {
 			System.out.println();
 		}
 	}
-
-	private boolean checkConsecutive(char symbol, int consecutiveCount) {
+	//Checks whether there is consecutive symbol according to number
+	public boolean checkConsecutive(char symbol, int consecutiveCount) {
 		return checkRows(symbol, consecutiveCount) || checkColumns(symbol, consecutiveCount)
 				|| checkDiagonals(symbol, consecutiveCount);
 	}
-
+	
+	
 	private boolean checkRows(char symbol, int consecutiveCount) {
 		for (int i = 0; i < data.length; i++) {
 			for (int j = 0; j <= data[i].length - consecutiveCount; j++) {
