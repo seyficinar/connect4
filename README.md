@@ -1,4 +1,5 @@
-Connect4 game with basic AI
+Connect4 game with basic AI.
+
 Description and criteria of the project: 
 
 Project Description:
